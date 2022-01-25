@@ -1,24 +1,16 @@
-import { createContext, useContext, useEffect, useRef } from 'react';
+import { createContext, useRef } from 'react';
 import './App.css';
 import Channels from './Channels/Channels';
 import Controller from './Controller/Controller';
 import Header from './Header/Header';
-
-
-const soundsNames = [
-  {path: "_tambourine_shake_higher.mp3", name: "Tambourine"},
-  {path: "B_VOC.mp3", name: "Middle Voice"},
-  {path: "DRUMS.mp3", name: "Drums"},
-  {path: "HE_HE_VOC.mp3", name: "He Voice"}, 
-  {path: "HIGH_VOC.mp3", name: "High Voice"},
-  {path: "JIBRISH.mp3", name: "Jibrish"}, 
-  {path: "LEAD_1.mp3", name: "Low Voice"}, 
-  {path: "UUHO_VOC.mp3", name: "Ho Voice"}];
+import soundsNames from './soundsNames.json';
   
-export const SoundsContext = createContext()
+// All sounds have the ability to be changed directly from the whole app:
+  export const SoundsContext = createContext()
 
 function App() {
 
+  // Create the "sound" object' with the audio element, name, index and duration:
   const soundsRef = useRef(
       soundsNames.map((sound, index) => {
       const audio = new Audio(`./Sounds/${sound.path}`)
@@ -27,13 +19,10 @@ function App() {
         name: sound.name,
         index: index
       }
-
       audio.addEventListener('loadedmetadata', (e) => {
         res.duration =  e.target.duration
       })
-
       return res
-      
     })
   )
 
@@ -41,7 +30,6 @@ function App() {
   <div className="GeneralContainer">
     <Header />
     <SoundsContext.Provider value={soundsRef.current}>
-      {/* <TimeSquare audio={soundsRef.current[0].audio} /> */}
       <Channels />
       <Controller />
     </SoundsContext.Provider>

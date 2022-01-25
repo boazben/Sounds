@@ -1,0 +1,10 @@
+[
+    {"path": "_tambourine_shake_higher.mp3", "name": "Tambourine"},
+    {"path": "B_VOC.mp3", "name": "Middle Voice"},
+    {"path": "DRUMS.mp3", "name": "Drums"},
+    {"path": "HE_HE_VOC.mp3", "name": "He Voice"}, 
+    {"path": "HIGH_VOC.mp3", "name": "High Voice"},
+    {"path": "JIBRISH.mp3", "name": "Jibrish"}, 
+    {"path": "LEAD_1.mp3", "name": "Low Voice"}, 
+    {"path": "UUHO_VOC.mp3", "name": "Ho Voice"}
+]

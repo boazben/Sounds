@@ -4,8 +4,11 @@ import Style from './LoopToggle.module.css'
 
 export default function LoopToggle() {
     const sounds = useContext(SoundsContext)
+  
+    // A state that check if the songs defined to loop or not:
     const [onOff, setOnOff] = useState(sounds[0].audio.loop)
 
+    // Change the loop state, and the toggle:
     const loop = () => {
         sounds.forEach(sound => {
           sound.audio.loop = !sound.audio.loop

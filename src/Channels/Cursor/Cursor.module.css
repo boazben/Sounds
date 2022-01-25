@@ -1,0 +1,13 @@
+.container {
+    height: 400px;
+    /* background-color: var(--oreng); */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.cursor {
+    top:-5px;
+    z-index: 1;
+    
+}

@@ -1,0 +1,42 @@
+.container {
+    cursor: pointer;
+    background-color: var(--black);
+    width: 70px;
+    height: 18px;
+    border-radius: 10px;
+    padding: 5px 2px;
+    position: relative;
+}
+
+.text {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.textOff {
+    left: 50%;
+    
+}
+
+.state {
+    background-color: var(--cream);
+    width: 50%;
+    height:100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 10px 10px 0px;
+}
+
+.off {
+   left: 0;
+    border-radius: 10px 0 0 10px
+
+}
